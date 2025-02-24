@@ -2,7 +2,7 @@ import pandas as pd
 import datetime as dt
 
 Latest_Date = dt.datetime(2011, 12, 11)
-temp=0
+
 class RFMAnalyzer:
     def __init__(self, RFMScores):
         self.Latest_Date = Latest_Date
@@ -10,14 +10,18 @@ class RFMAnalyzer:
         self.RFMScores = RFMScores
 
     def preprocess_data(self):
+        # Replace empty strings with NaN and drop any rows with missing values.
+        self.RFMScores.replace(r'^\s*$', pd.NA, regex=True, inplace=True)
+        self.RFMScores.dropna(inplace=True)
+        
         self.RFMScores['TotalAmount'] = self.RFMScores['Quantity'] * self.RFMScores['UnitPrice']
         self.RFMScores['InvoiceDate'] = pd.to_datetime(self.RFMScores['InvoiceDate'], dayfirst=True)
 
-    def calculate_RFMScores(self,temp):
+    def calculate_RFMScores(self):
         self.RFMScores = self.RFMScores.groupby('CustomerID').agg({
             'CustomerID': lambda x: x.unique()[0],
             'InvoiceDate': lambda x: (self.Latest_Date - x.max()).days,
-            'InvoiceNo': lambda x: x if temp==1 else len(x),
+            'InvoiceNo': lambda x: len(x),
             'TotalAmount': lambda x: x.sum()
         })
         self.RFMScores['InvoiceDate'] = self.RFMScores['InvoiceDate'].astype(int)
@@ -64,11 +68,13 @@ class RFMAnalyzer:
     def save_results(self, output_path):
         self.RFMScores.to_csv(output_path, index=False)
 
+
+# Example usage:
 RFMScores = pd.read_csv('Online_Retail_Train.zip', encoding='unicode_escape')
 
 analyzer = RFMAnalyzer(RFMScores)
 analyzer.preprocess_data()
-analyzer.calculate_RFMScores(temp)
+analyzer.calculate_RFMScores()
 analyzer.calculate_quantiles()
 analyzer.calculate_RFM_scores()
 analyzer.calculate_RFM_total()
