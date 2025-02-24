@@ -22,7 +22,7 @@ def add_entry_to_csv(invoice_no, stock_code, description, quantity, unit_price, 
     The record includes additional fields: StockCode, Description, and Country.
     InvoiceDate now includes both date and time (only hours and minutes).
     """
-    current_datetime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    current_datetime = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
     data = {
         "InvoiceNo": invoice_no,
         "StockCode": stock_code,
