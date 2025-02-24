@@ -64,7 +64,7 @@ class RFMAnalyzer:
     def save_results(self, output_path):
         self.RFMScores.to_csv(output_path, index=False)
 
-RFMScores = pd.read_csv('Online_Retail_Train.csv', encoding='unicode_escape')
+RFMScores = pd.read_csv('Online_Retail_Train.zip', encoding='unicode_escape')
 
 analyzer = RFMAnalyzer(RFMScores)
 analyzer.preprocess_data()
