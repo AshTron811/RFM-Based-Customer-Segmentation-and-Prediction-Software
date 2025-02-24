@@ -14,7 +14,7 @@ import KMeans_Model
 import RandomForest_Model
 
 # Define the CSV file path (an already existing CSV file)
-CSV_FILE = "Online_Retail_Train.csv"
+CSV_FILE = "Online_Retail_Train.zip"
 
 def add_entry_to_csv(invoice_no, stock_code, description, quantity, unit_price, customer_id, country):
     """
