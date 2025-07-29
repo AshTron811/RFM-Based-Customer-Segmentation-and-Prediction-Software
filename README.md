@@ -183,6 +183,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 **Ashutosh Sharma**
 
 * GitHub: [@AshTron811](https://github.com/AshTron811)
-* Email: [your.email@example.com](mailto:your.email@example.com)
+* Email: [ashutosh10615@gmail.com](mailto:ashutosh10615@gmail.com)
 
 Feel free to open an issue or reach out if you have any questions or suggestions!
