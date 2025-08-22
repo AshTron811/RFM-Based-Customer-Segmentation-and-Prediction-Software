@@ -35,28 +35,6 @@ This project implements an end‑to‑end pipeline for customer segmentation bas
 
 ---
 
-## 🗂 Repository Structure
-
-All key files and their direct links in the repository:
-
-```
-├── [.devcontainer/](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/tree/main/.devcontainer)
-├── [.streamlit/](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/tree/main/.streamlit)
-├── [Online_Retail_Train.zip](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/Online_Retail_Train.zip)
-├── [RFM_Analysis.py](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/RFM_Analysis.py)
-├── [KMeans_Model.py](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/KMeans_Model.py)
-├── [RandomForest_Model.py](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/RandomForest_Model.py)
-├── [predictor.py](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/predictor.py)
-├── [Plots.ipynb](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/Plots.ipynb)
-├── [rf.pkl](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/rf.pkl)
-├── [confusion_matrix_rf.png](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/confusion_matrix_rf.png)
-├── [newplot.png](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/newplot.png)
-├── [requirements.txt](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/requirements.txt)
-└── [README.md](https://github.com/AshTron811/RFM-Based-Customer-Segmentation-and-Prediction-Software/blob/main/README.md)  ← You are here
-```
-
----
-
 ## 🔗 Deployed Application
 
 Access the live app at: [Deployed Streamlit App](https://rfm-based-customer-segmentation-and-prediction-software.streamlit.app)
